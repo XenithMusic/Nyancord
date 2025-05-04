@@ -109,7 +109,7 @@ function VencordSettings() {
         ];
 
     return (
-        <SettingsTab title="Vencord Settings">
+        <SettingsTab title="Nyancord Settings">
             {isDonor(user?.id)
                 ? (
                     <SpecialCard
@@ -302,4 +302,4 @@ function isDonor(userId: string): boolean {
     return GuildMemberStore.getMember(VENCORD_GUILD_ID, userId)?.roles.includes(DONOR_ROLE_ID) || !!donorBadges;
 }
 
-export default wrapTab(VencordSettings, "Vencord Settings");
+export default wrapTab(VencordSettings, "Nyancord Settings");
